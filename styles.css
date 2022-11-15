@@ -1,0 +1,78 @@
+:root * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* Aooly the rule above to your previous form page and see what happens with margin */
+
+body {
+    display: grid;
+    grid-template: 200px auto / 200px 1fr;
+    grid-template-areas: 
+    "a b"
+    "a c";
+}
+
+body > * {
+    border: solid;
+}
+
+body > * > * {
+    border: solid;
+}
+
+.navigation {
+    grid-area: a;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    align-content: start;
+}
+
+.navigation > div {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.navigation > div > div {
+    display: grid;
+    grid-template-columns: 30px  auto;
+}
+
+.header {
+    grid-area: b;
+}
+
+.content {
+    grid-area: c;
+    min-height: calc(100vh - 200px);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
+
+.content > .left {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 50px;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.content > .left > .title {
+    border: solid;
+    overflow: auto;
+    text-overflow: clip;
+    grid-column: 1 / -1;
+}
+
+.content > .left > .tile {
+    border: solid;
+    overflow: auto;
+    text-overflow: clip;
+}
