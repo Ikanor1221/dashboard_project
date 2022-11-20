@@ -42,6 +42,7 @@ a {
 
 button:hover {
     scale: 1.05;
+    cursor: pointer;
 }
 
 .link:hover {
@@ -130,6 +131,120 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.header {
+    grid-area: b;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    background-color: var(--gray-1);
+    box-shadow: var(--shadow-lg);
+    z-index: 3;
+}
+
+.header > .top {
+    display: grid;
+    grid-template-columns: minmax(40px, auto) 1fr minmax(40px, auto) minmax(80px, auto);
+    gap: 10px;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header input {
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e7e5e4;
+    width: max(40%, 200px);
+}
+
+.header .icon {
+    height: 30px;
+    justify-self: center;
+}
+
+.header .top .profilePicture {
+    margin-left: 10px;
+}
+
+.header .profilePicture img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.header .bottom .profilePicture img {
+    height: 70px;
+}
+
+.header > .bottom {
+    display: grid;
+    grid-template-columns: minmax(50px, auto) 1fr 300px;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .top button {
+    background-color: var(--gray-1);
+    border: none;
+}
+
+.header .bottom button {
+    height: 40px;
+    border-radius: 15px;
+    background-color: var(--primary);
+    color: var(--gray-1);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+}
+
+.searchbar-parent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.icon {
+    height: 30px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: right;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.tile.project {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    font-weight: 700;
+}
+
+.userName.large {
+    font-size: 1.4rem;
 }
 
 
@@ -262,116 +377,3 @@ body {
 
 
 
-.header {
-    grid-area: b;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    background-color: var(--gray-1);
-    box-shadow: var(--shadow-lg);
-    z-index: 3;
-}
-
-.header > .top {
-    display: grid;
-    grid-template-columns: minmax(40px, auto) 1fr minmax(40px, auto) minmax(80px, auto);
-    gap: 10px;
-    align-items: center;
-}
-
-.link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header input {
-    height: 35px;
-    border-radius: 20px;
-    border: none;
-    background-color: #e7e5e4;
-    width: max(40%, 200px);
-}
-
-.header .icon {
-    height: 30px;
-    justify-self: center;
-}
-
-.header .top .profilePicture {
-    margin-left: 10px;
-}
-
-.header .profilePicture img {
-    height: 50px;
-    border-radius: 50%;
-}
-
-
-.header .bottom .profilePicture img {
-    height: 70px;
-}
-
-.header > .bottom {
-    display: grid;
-    grid-template-columns: minmax(50px, auto) 1fr 300px;
-    align-items: center;
-    gap: 10px;
-}
-
-.header .top button {
-    background-color: var(--gray-1);
-    border: none;
-}
-
-.header .bottom button {
-    height: 40px;
-    border-radius: 15px;
-    background-color: var(--primary);
-    color: var(--gray-1);
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-}
-
-.searchbar-parent {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 5px;
-    padding: 5px;
-}
-
-.icon {
-    height: 30px;
-}
-
-.icons {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: right;
-    gap: 10px;
-    margin-top: auto;
-}
-
-.tile.project {
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-}
-
-.userName {
-    font-weight: 700;
-}
-
-.userName.large {
-    font-size: 1.4rem;
-}
